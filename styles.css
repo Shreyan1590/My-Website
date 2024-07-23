@@ -14,6 +14,7 @@ header {
   background-color: #25b79f;
   height: 100vh;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .container {
