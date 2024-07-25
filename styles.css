@@ -289,3 +289,16 @@ header {
 .back-to-top.visible {
   display: block;
 }
+
+@media (max-width: 768px) {
+  .project-item {
+      width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item {
+      width: 100%;
+      margin: 10px 0;
+  }
+}
