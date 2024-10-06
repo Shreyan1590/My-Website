@@ -84,6 +84,21 @@ header {
   font-size: 1.5rem;
 }
 
+.animated-text {
+  font-size: 1.5rem;
+  color: #555;
+  font-weight: bolder;
+}
+
+.text-slide {
+  display: none;
+}
+
+.text-slide.active {
+  display: block;
+  animation: fadeInText 2s ease-in-out;
+}
+
 .angle-down-icon {
   position: absolute;
   bottom: 10%;
@@ -390,7 +405,6 @@ header {
 }
 
 .certificate-section {
-  padding: 10px;
   padding-bottom: 50px;
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* Gradient background */
 }

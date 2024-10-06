@@ -1,3 +1,15 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedText = document.querySelectorAll(".text-slide");
+    let current = 0;
+  
+    // Animated text cycle effect
+    setInterval(() => {
+        animatedText[current].classList.remove("active");
+        current = (current + 1) % animatedText.length;
+        animatedText[current].classList.add("active");
+    }, 3000);
+})
+    
 $(document).ready(function () {
     $(window).scroll(function () {
         // checks if window is scrolled more than 500px, adds/removes solid class
@@ -65,3 +77,4 @@ popup.addEventListener('click', function(e) {
         popup.style.display = 'none';
     }
 });
+
