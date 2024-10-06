@@ -8,10 +8,15 @@ $(document).ready(function () {
             $('.navbar').removeClass('solid');
             $('.back-to-top').removeClass('visible');
         }
-    });
 
+    });
+});
+
+
+$(document).ready(function () {
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
+
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
             // Prevent default anchor click behavior
@@ -25,17 +30,38 @@ $(document).ready(function () {
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
             }, 800, function () {
+
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
         } // End if
     });
+});
 
-    // Back to top button functionality
-    $('.back-to-top').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
+// Select all certificate images
+const certificates = document.querySelectorAll('.certificate');
+
+// Get the modal elements
+const popup = document.querySelector('.certificate-popup');
+const popupImage = document.getElementById('enlargedCertificate');
+const close = document.querySelector('.close');
+
+// Add click event listener to each certificate
+certificates.forEach(cert => {
+    cert.addEventListener('click', function() {
+        popup.style.display = 'flex';
+        popupImage.src = this.src;  // Display clicked certificate in full-screen popup
     });
+});
+
+// Close the popup when the close button is clicked
+close.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Close the popup when clicking outside the image (optional)
+popup.addEventListener('click', function(e) {
+    if (e.target !== popupImage) {
+        popup.style.display = 'none';
+    }
 });
