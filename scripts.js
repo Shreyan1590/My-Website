@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
         animatedText[current].classList.add("active");
     }, 3000);
 })
+
+// JavaScript to handle the hamburger menu toggle
+$(document).ready(function() {
+    $('#hamburger').click(function() {
+        $('#menuItems').toggleClass('active');
+    });
+});
     
 $(document).ready(function () {
     $(window).scroll(function () {

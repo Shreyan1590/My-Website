@@ -10,9 +10,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
+.header {
   background-color: #25b79f;
   height: 100vh;
+  align-items: center;
 }
 
 .container {
@@ -21,8 +22,18 @@ header {
   margin: auto;
 }
 
-/* ////........Navbar.......//// */
+.logo {
+  width: 50px; /* Adjust the size accordingly */
+  margin-right: 10px; /* Space between logo and text */
+}
 
+.title {
+  font-size: 24px;
+  color: #fff; /* Or whichever color you prefer */
+}
+
+
+/* ////........Navbar.......//// */
 .navbar {
   position: fixed;
   width: 100%;
@@ -38,11 +49,13 @@ header {
 
 .menu-items {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-items li {
-  list-style: none;
-  padding: 1rem;
+  margin: 0 15px;
 }
 
 .menu-items a {
@@ -54,12 +67,6 @@ header {
 
 .menu-items a:hover {
   border-bottom: 2px solid #f0f0e6;
-}
-
-.navbar .logo {
-  order: 1;
-  color: #f0f0e6;
-  font-size: 2rem;
 }
 
 /* ////........Home Content........//// */
@@ -113,6 +120,27 @@ header {
   text-decoration: none;
   color: #07374a;
   padding: 1rem;
+}
+
+/* Add styles for the hamburger icon */
+.hamburger {
+  display: none; /* Hide by default */
+  flex-direction: column; /* Stack lines */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.hamburger div {
+  width: 25px; /* Width of hamburger lines */
+  height: 3px; /* Height of hamburger lines */
+  background-color: white; /* Color of hamburger lines */
+  margin: 4px 0; /* Space between lines */
+}
+
+/* Show hamburger icon on mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex; /* Show hamburger icon */
+  }
 }
 
 /* ////........About Me........//// */
@@ -511,6 +539,35 @@ header {
 }
 
 /* ////......Media query......//// */
+
+@media (max-width: 768px) {
+  .navbar-container {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center align items */
+  }
+
+  .menu-items {
+      flex-direction: column; /* Stack menu items vertically */
+      display: none; /* Hide by default */
+      width: 100%; /* Full width for mobile menu */
+  }
+
+  .menu-items li {
+      margin: 10px 0; /* Space between menu items */
+  }
+
+  .navbar-brand-container {
+      display: flex;
+      justify-content: center; /* Center brand on mobile */
+      width: 100%; /* Full width */
+  }
+
+  .navbar-toggle {
+      display: block; /* Show hamburger menu */
+      cursor: pointer; /* Pointer cursor */
+      color: #fff; /* Hamburger color */
+  }
+}
 
 @media (max-width: 500px) {
   html {
