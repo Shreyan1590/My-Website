@@ -122,27 +122,6 @@ body {
   padding: 1rem;
 }
 
-/* Add styles for the hamburger icon */
-.hamburger {
-  display: none; /* Hide by default */
-  flex-direction: column; /* Stack lines */
-  cursor: pointer; /* Pointer cursor */
-}
-
-.hamburger div {
-  width: 25px; /* Width of hamburger lines */
-  height: 3px; /* Height of hamburger lines */
-  background-color: white; /* Color of hamburger lines */
-  margin: 4px 0; /* Space between lines */
-}
-
-/* Show hamburger icon on mobile view */
-@media (max-width: 768px) {
-  .hamburger {
-      display: flex; /* Show hamburger icon */
-  }
-}
-
 /* ////........About Me........//// */
 
 .about-me {
@@ -540,10 +519,10 @@ body {
 
 /* ////......Media query......//// */
 
-@media (max-width: 768px) {
+@media (max-width: 350px) {
   .navbar-container {
       flex-direction: column; /* Stack elements vertically */
-      align-items: center; /* Center align items */
+      align-items: normal; /* Center align items */
   }
 
   .menu-items {
