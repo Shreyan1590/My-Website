@@ -25,6 +25,14 @@
       <priority>0.9</priority>
    </url>
 
+   <!-- Certifications Page -->
+   <url>
+      <loc>https://shreyan-portfolio.vercel.app/Certifications</loc>
+      <lastmod>2024-10-28</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+
    <!-- Contact Page -->
    <url>
       <loc>https://shreyan-portfolio.vercel.app/contact</loc>

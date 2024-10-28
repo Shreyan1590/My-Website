@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Block sensitive pages or private directories if you have any (remove or modify as needed)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /settings/
+
+# Allow all other content to be crawled and indexed
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: https://shreyan-portfolio.vercel.app/sitemap.xml
