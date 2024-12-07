@@ -68,19 +68,71 @@ const close = document.querySelector('.close');
 // Add click event listener to each certificate
 certificates.forEach(cert => {
     cert.addEventListener('click', function() {
-        popup.style.display = 'flex';
-        popupImage.src = this.src;  // Display clicked certificate in full-screen popup
+        popup.style.display = 'flex'; // Show the modal
+        popupImage.src = this.src; // Display clicked certificate in full-screen popup
+        document.body.classList.add('no-scroll'); // Lock background scrolling
     });
 });
 
 // Close the popup when the close button is clicked
 close.addEventListener('click', function() {
-    popup.style.display = 'none';
+    popup.style.display = 'none'; // Hide the modal
+    document.body.classList.remove('no-scroll'); // Enable background scrolling
 });
 
-// Close the popup when clicking outside the image (optional)
+// Close the popup when clicking outside the image
 popup.addEventListener('click', function(e) {
     if (e.target !== popupImage) {
-        popup.style.display = 'none';
+        popup.style.display = 'none'; // Hide the modal
+        document.body.classList.remove('no-scroll'); // Enable background scrolling
     }
 });
+
+console.clear();
+
+const TAIL_LENGTH = 20;
+
+const cursor = document.getElementById('cursor');
+
+let mouseX = 0;
+let mouseY = 0;
+
+let cursorCircles;
+let cursorHistory = Array(TAIL_LENGTH).fill({x: 0, y: 0});
+
+function onMouseMove(event) {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+}
+
+function initCursor() {
+  for (let i = 0; i < TAIL_LENGTH; i++) {
+    let div = document.createElement('div');
+    div.classList.add('cursor-circle') ;
+    cursor.append(div);
+  }
+  cursorCircles = Array.from(document.querySelectorAll('.cursor-circle'));
+}
+
+function updateCursor() {  
+  cursorHistory.shift();
+  cursorHistory.push({ x: mouseX, y: mouseY });
+    
+  for (let i = 0; i < TAIL_LENGTH; i++) {
+    let current = cursorHistory[i];
+    let next = cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
+    
+    let xDiff = next.x - current.x;
+    let yDiff = next.y - current.y;
+    
+    current.x += xDiff * 0.35;
+    current.y += yDiff * 0.35;
+    cursorCircles[i].style.transform = `translate(${current.x}px, ${current.y}px) scale(${i/TAIL_LENGTH})`;  
+  }
+  requestAnimationFrame(updateCursor)
+}
+
+document.addEventListener('mousemove', onMouseMove, false);
+
+initCursor();
+updateCursor();
