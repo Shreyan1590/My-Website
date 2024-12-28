@@ -1,69 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyan's Portfolio</title>
-    <meta name="google-site-verification" content="bHoyyZpyrIWXgnulzKPyO3o08hajP44MbyV-5v2I3nk" />
-    <meta name="description" content="Welcome to Shreyan's portfolio showcasing expertise in web development, 3D animations, and interactive UI/UX design. Explore innovative projects, creative solutions, and the skills driving digital transformations.">
-    <meta name="keywords" content="Shreyan portfolio, web developer, designer, animations, responsive websites, Shreyan, UI/UX design, interactive websites">
-    <meta name="author" content="Shreyan">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Shreyan's Professional Portfolio">
-    <meta property="og:description" content="Explore Shreyan's portfolio of web development and interactive 3D design projects, combining advanced front-end and back-end development skills.">
-    <meta property="og:image" content="URL to your image preview">
-    <meta property="og:url" content="https://shreyan-portfolio.vercel.app/">
-    <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyan's Portfolio</title>
+  <meta name="google-site-verification" content="bHoyyZpyrIWXgnulzKPyO3o08hajP44MbyV-5v2I3nk" />
+  <meta name="description"
+    content="Welcome to Shreyan's portfolio showcasing expertise in web development, 3D animations, and interactive UI/UX design. Explore innovative projects, creative solutions, and the skills driving digital transformations.">
+  <meta name="keywords"
+    content="Shreyan portfolio, web developer, designer, animations, responsive websites, Shreyan, UI/UX design, interactive websites">
+  <meta name="author" content="Shreyan">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Shreyan's Professional Portfolio">
+  <meta property="og:description"
+    content="Explore Shreyan's portfolio of web development and interactive 3D design projects, combining advanced front-end and back-end development skills.">
+  <meta property="og:image" content="URL to your image preview">
+  <meta property="og:url" content="https://shreyan-portfolio.vercel.app/">
+  <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
 
 
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
     <defs>
-        <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo"></feColorMatrix>
-            <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
-        </filter>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+      </filter>
     </defs>
-</svg>
+  </svg>
 
-
-<div id="cursor"></div>
+  <div id="cursor"></div>
   <header class="header">
     <nav class="navbar">
-        <div class="navbar-container container">
-            <div class="navbar-brand-container">
-                <img src="My Logo.jpg" alt="Shreyan's Portfolio Logo" class="logo"> <!-- Add your logo here -->
-                <h1 class="navbar-brand">Shreyan Innovates</h1>
-            </div>
-            <ul class="menu-items">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">My Projects</a></li>
-                <li><a href="#certification">My Certifications</a></li>
-                <li><a href="#contact-me">Contact</a></li>
-            </ul>
+      <div class="navbar-container container">
+        <div class="navbar-brand-container">
+          <img src="My Logo.jpg" alt="Shreyan's Portfolio Logo" class="logo"> <!-- Add your logo here -->
+          <h1 class="navbar-brand">Shreyan Innovates</h1>
         </div>
+        <ul class="menu-items">
+          <li><a href="#home-page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">My Projects</a></li>
+          <li><a href="#certification">My Certifications</a></li>
+          <li><a href="#contact-me">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="home-content" id="home-page">
-        <div class="name">
-            <h1>Hi, I'm Shreyan</h1>
-            <p>A Web Developer in training.</p>
-            <div class="animated-text">
-                <span class="text-slide active">Innovative Developer.</span>
-                <span class="text-slide">Creative Thinker.</span>
-                <span class="text-slide">Turning Ideas into Reality.</span>
-            </div>
+      <div class="name">
+        <h1>Hi, I'm Shreyan</h1>
+        <p>A Web Developer in training.</p>
+        <div class="animated-text">
+          <span class="text-slide active">Innovative Developer.</span>
+          <span class="text-slide">Creative Thinker.</span>
+          <span class="text-slide">Turning Ideas into Reality.</span>
         </div>
-        <div class="angle-down-icon">
-            <a href="#about"><i class="fas fa-angle-down"></i></a>
-        </div>
+      </div>
+      <div class="angle-down-icon">
+        <a href="#about"><i class="fas fa-angle-down"></i></a>
+      </div>
     </div>
-</header>
+  </header>
 
   <section class="about-me" id="about">
     <div class="container">
@@ -132,62 +137,80 @@
     </div>
   </section>
 
-<section class="projects-section" id="projects">
+  <section class="projects-section" id="projects">
     <!-- Heading for the Projects Section -->
     <h1 class="projects-heading">My Projects</h1>
-    
+
     <!-- Container for all projects -->
     <div class="projects-container">
-        <!-- Example of a single project -->
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1" class="project-image">
-            <h2 class="project-title">3D Website</h2>
-            <p class="project-description">Welcome to my 3D Portfolio, a curated showcase of my creative journey in web development and 3D design. Here, you'll find a collection of innovative projects that demonstrate my expertise in crafting immersive experiences using advanced technologies like Three.js, CSS animations, and responsive design principles. Each project reflects my passion for blending aesthetics with functionality, resulting in visually stunning and user-friendly interfaces. Whether it's creating captivating visual elements or interactive web applications, I strive to push the boundaries of creativity. Explore my work and discover the art of 3D design through my lens!</p>
-            <div class="project-links">
-                <a href="https://github.com/your-project" class="project-link">GitHub</a>
-                <a href="https://3d-portfolio-shreyan.vercel.app/" class="project-link">Live Demo</a>
-            </div>
+      <!-- Example of a single project -->
+      <div class="project">
+        <img src="project1.jpg" alt="Project 1" class="project-image">
+        <h2 class="project-title">3D Website</h2>
+        <p class="project-description">Welcome to my 3D Portfolio, a curated showcase of my creative journey in web
+          development and 3D design. Here, you'll find a collection of innovative projects that demonstrate my expertise
+          in crafting immersive experiences using advanced technologies like Three.js, CSS animations, and responsive
+          design principles. Each project reflects my passion for blending aesthetics with functionality, resulting in
+          visually stunning and user-friendly interfaces. Whether it's creating captivating visual elements or
+          interactive web applications, I strive to push the boundaries of creativity. Explore my work and discover the
+          art of 3D design through my lens!</p>
+        <div class="project-links">
+          <a href="https://github.com/your-project" class="project-link">GitHub</a>
+          <a href="https://3d-portfolio-shreyan.vercel.app/" class="project-link">Live Demo</a>
         </div>
-        
-        <!-- Repeat for more projects -->
-        <div class="project">
-            <img src="Shop Logo.jpg" alt="Project 2" class="project-image">
-            <h2 class="project-title">Sri Vari & Co</h2>
-            <p class="project-description">Sri Vari & Co. offers a wide array of mobile phone accessories tailored to meet the needs of modern users. From high-quality AirPods and Bluetooth neckbands to reliable chargers and data cables, we provide everything to enhance your mobile experience. Our collection also includes stylish pouches, memory cards, and tempered glass to protect your devices. With a commitment to quality and customer satisfaction, we ensure that you find the perfect accessory for your mobile lifestyle. Visit us for unbeatable prices and exceptional service!</p>
-            <div class="project-links">
-                <a href="https://github.com/your-project" class="project-link">GitHub</a>
-                <a href="https://srivariandco.vercel.app/" class="project-link">Live Demo</a>
-            </div>
-        </div>
-
-        <div class="project">
-          <img src="project3.jpg" alt="Project 3" class="project-image">
-          <h2 class="project-title">Mall Website</h2>
-          <p class="project-description">Welcome to V Square, your ultimate shopping, dining, and entertainment destination. Whether you're looking for fashion, electronics, home decor, or accessories, our mall offers top brands and specialty stores. Explore dining options, from casual cafes to gourmet restaurants. Enjoy family-friendly entertainment, including a cinema, gaming arcades, and live events. Conveniently located with ample parking, V Square offers a vibrant atmosphere for a memorable shopping experience. Whether it's a quick stop or a full day of fun, there's always something exciting to discover here. Visit and experience the best in retail and entertainment under one roof!</p>
-          <div class="project-links">
-              <a href="https://github.com/your-project" class="project-link">GitHub</a>
-              <a href="https://vsquare-mall.vercel.app/" class="project-link">Live Demo</a>
-          </div>
       </div>
 
-        <!-- Add more projects as needed -->
+      <!-- Repeat for more projects -->
+      <div class="project">
+        <img src="Shop Logo.jpg" alt="Project 2" class="project-image">
+        <h2 class="project-title">Sri Vari & Co</h2>
+        <p class="project-description">Sri Vari & Co. offers a wide array of mobile phone accessories tailored to meet
+          the needs of modern users. From high-quality AirPods and Bluetooth neckbands to reliable chargers and data
+          cables, we provide everything to enhance your mobile experience. Our collection also includes stylish pouches,
+          memory cards, and tempered glass to protect your devices. With a commitment to quality and customer
+          satisfaction, we ensure that you find the perfect accessory for your mobile lifestyle. Visit us for unbeatable
+          prices and exceptional service!</p>
+        <div class="project-links">
+          <a href="https://github.com/your-project" class="project-link">GitHub</a>
+          <a href="https://srivariandco.vercel.app/" class="project-link">Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="project3.jpg" alt="Project 3" class="project-image">
+        <h2 class="project-title">Mall Website</h2>
+        <p class="project-description">Welcome to V Square, your ultimate shopping, dining, and entertainment
+          destination. Whether you're looking for fashion, electronics, home decor, or accessories, our mall offers top
+          brands and specialty stores. Explore dining options, from casual cafes to gourmet restaurants. Enjoy
+          family-friendly entertainment, including a cinema, gaming arcades, and live events. Conveniently located with
+          ample parking, V Square offers a vibrant atmosphere for a memorable shopping experience. Whether it's a quick
+          stop or a full day of fun, there's always something exciting to discover here. Visit and experience the best
+          in retail and entertainment under one roof!</p>
+        <div class="project-links">
+          <a href="https://github.com/your-project" class="project-link">GitHub</a>
+          <a href="https://vsquare-mall.vercel.app/" class="project-link">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Add more projects as needed -->
     </div>
-</section>
+  </section>
 
-<section class="certificate-section" id="certification">
-  <h1 class="certificate-heading">My Certifications</h1>
-  <div class="certificate-container">
-    <!-- Example Certificate -->
-    <img src="certificate1.jpg" alt="Certificate 1" class="certificate">
-    <!-- Add more certificates -->
-  </div>
+  <section class="certificate-section" id="certification">
+    <h1 class="certificate-heading">My Certifications</h1>
+    <div class="certificate-container">
+      <img src="certificate1.jpg" alt="Certificate 1" class="certificate">
+    </div>
+    <div class="certificate-container">
+      <img src="certificate2.png" alt="Certificate 2" class="certificate">
+    </div>
 
-  <!-- Popup modal for enlarged view -->
-  <div class="certificate-popup" id="certificatePopup">
-    <span class="close" id="closePopup">&times;</span>
-    <img class="popup-image" id="enlargedCertificate">
-  </div>
-</section>
+    <!-- Popup modal for enlarged view -->
+    <div class="certificate-popup" id="certificatePopup">
+      <span class="close" id="closePopup">&times;</span>
+      <img class="popup-image" id="enlargedCertificate">
+    </div>
+  </section>
 
   <div class="contact" id="contact-me">
     <div class="container">
@@ -200,7 +223,8 @@
         <a href="https://www.linkedin.com/in/shreyan-s2596/" target="blank"><i class="fab fa-linkedin">
             Linkedin</i></a>
         <a href="https://github.com/shreyan1590" target="blank"><i class="fab fa-github"></i> Github</a>
-        <a href="https://www.facebook.com/profile.php?id=100093028359128" target="blank"><i class="fab fa-facebook"> Facebook</i></a>
+        <a href="https://www.facebook.com/profile.php?id=100093028359128" target="blank"><i class="fab fa-facebook">
+            Facebook</i></a>
         <a href="https://www.instagram.com/shreyan_2596/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
       </div>
     </div>
@@ -208,6 +232,18 @@
   <!-- JAVASCRIPT -->
   <script src="scripts.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>
