@@ -19,6 +19,7 @@
   <meta property="og:image" content="URL to your image preview">
   <meta property="og:url" content="https://shreyan-portfolio.vercel.app/">
   <link rel="stylesheet" href="styles.css"> <!-- Make sure this path is correct -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -26,6 +27,13 @@
 
 
 <body>
+  <div class="container2">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <svg xmlns="http://www.w3.org/2000/svg" class="goo" version="1.1" width="100%">
     <defs>
       <filter id="goo">
@@ -41,16 +49,16 @@
   <header class="header">
     <nav class="navbar">
       <div class="navbar-container container">
-        <div class="navbar-brand-container">
-          <img src="My Logo.jpg" alt="Shreyan's Portfolio Logo" class="logo"> <!-- Add your logo here -->
-          <h1 class="navbar-brand">Shreyan Innovates</h1>
+        <div class="logo">
+          <img src="My Logo.jpg" alt="Shreyan's Portfolio Logo" class="logo-icon">
+          <h1>Shreyan Innovates</h1>
         </div>
         <ul class="menu-items">
           <li><a href="#home-page">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">My Projects</a></li>
           <li><a href="#certification">My Certifications</a></li>
-          <li><a href="#contact-me">Contact</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -65,7 +73,7 @@
         </div>
       </div>
       <div class="angle-down-icon">
-        <a href="#about"><i class="fas fa-angle-down"></i></a>
+        <a href="#about"><i class="fas fa-arrow-down"></i></a>
       </div>
     </div>
   </header>
@@ -145,7 +153,7 @@
     <div class="projects-container">
       <!-- Example of a single project -->
       <div class="project">
-        <img src="project1.jpg" alt="Project 1" class="project-image">
+        <img src="3D Logo.png" alt="Project 1" class="project-image">
         <h2 class="project-title">3D Website</h2>
         <p class="project-description">Welcome to my 3D Portfolio, a curated showcase of my creative journey in web
           development and 3D design. Here, you'll find a collection of innovative projects that demonstrate my expertise
@@ -177,7 +185,7 @@
       </div>
 
       <div class="project">
-        <img src="project3.jpg" alt="Project 3" class="project-image">
+        <img src="Mall Logo.png" alt="Project 3" class="project-image">
         <h2 class="project-title">Mall Website</h2>
         <p class="project-description">Welcome to V Square, your ultimate shopping, dining, and entertainment
           destination. Whether you're looking for fashion, electronics, home decor, or accessories, our mall offers top
@@ -212,30 +220,42 @@
     </div>
   </section>
 
-  <div class="contact" id="contact-me">
-    <div class="container">
-      <div class="contact-content">
+  <section id="contact" class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-card">
         <h2>Contact Me</h2>
-        <p class="mail">
-          Get in touch with me <i class="fas fa-arrow-right"></i> shreyanofficial25@gmail.com
+        <p class="contact-email">
+          Get in touch at <a href="mailto:shreyanofficial25@gmail.com">shreyanofficial25@gmail.com</a>
         </p>
-        <p class="links">Or find me on:</p>
-        <a href="https://www.linkedin.com/in/shreyan-s2596/" target="blank"><i class="fab fa-linkedin">
-            Linkedin</i></a>
-        <a href="https://github.com/shreyan1590" target="blank"><i class="fab fa-github"></i> Github</a>
-        <a href="https://www.facebook.com/profile.php?id=100093028359128" target="blank"><i class="fab fa-facebook">
-            Facebook</i></a>
-        <a href="https://www.instagram.com/shreyan_2596/" target="blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <p class="contact-message">Follow me on social media:</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="blank" class="social-icon facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="blank" class="social-icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="blank" class="social-icon twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://linkedin.com" target="blank" class="social-icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://youtube.com" target="blank" class="social-icon youtube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
   <!-- JAVASCRIPT -->
   <script src="scripts.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <button onclick="scrollToTop()" id="back-to-top" title="Back to Top">
     <i class="fa fa-arrow-up"></i>
-</button>
+  </button>
 </body>
 
 </html>

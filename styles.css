@@ -6,6 +6,76 @@
   box-sizing: border-box;
 }
 
+body { 
+  font-family: "Poppins", sans-serif;
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+  width: 100%; 
+  max-width: 100vw; 
+  overflow-x: hidden;
+}
+
+.container2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container2 span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container2  span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.container2  span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.container2 span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+.container2  span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+.container2 ::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+
 :root {
   --cursor-size: 28px;
   --bg: #FAF7EE;
@@ -39,10 +109,6 @@
   display: none;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
-
 .header {
   background-color: #25b79f;
   height: 100vh;
@@ -50,15 +116,29 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 4200px;
   width: 90%;
-  margin: auto;
+  margin: auto; 
 }
 
 .logo {
-  width: 50px; /* Adjust the size accordingly */
-  margin-right: 10px; /* Space between logo and text */
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between icon and text */
+  padding: 10px;
+  font-family: Arial, sans-serif; /* Customize font */
+}
+
+.logo-icon {
+  width: 70px; /* Adjust size of the icon */
+  height: auto;
+  overflow: hidden;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px; /* Customize font size */
+  color: #f0f0f0; /* Customize text color */
 }
 
 .title {
@@ -85,26 +165,63 @@ body {
   height: 64px;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and links */
+  align-items: center; /* Vertically aligns items */
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Adjust the logo's appearance */
+}
+
 .menu-items {
   display: flex;
+  flex-wrap: wrap; /* Allows links to wrap in smaller screens */
+  justify-content: flex-end; /* Align links to the right */
   list-style: none;
   margin: 0;
   padding: 0;
+  gap: 15px; /* Adds spacing between links */
 }
 
 .menu-items li {
-  margin: 0 15px;
+  flex: 0 1 auto; /* Ensures items adjust dynamically without growing too large */
+  text-align: center;
 }
 
 .menu-items a {
   text-decoration: none;
   color: #f0f0e6;
-  font-size: 1.2rem;
-  padding: 0.3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  display: block; /* Makes links clickable across their entire area */
+  text-align: center;
+  white-space: nowrap; /* Prevents text from breaking */
 }
 
 .menu-items a:hover {
   border-bottom: 2px solid #f0f0e6;
+}
+
+/* Responsive Design: Ensure links wrap and spacing is maintained */
+@media (max-width: 768px) {
+  .menu-items {
+    justify-content: center; /* Center links in smaller screens */
+    flex-wrap: wrap; /* Wrap links to the next line */
+  }
+}
+
+@media (min-width: 250px) {
+  .menu-items {
+    justify-content: center; /* Center links in smaller screens */
+    flex-wrap: wrap; /* Wrap links to the next line */
+  }
 }
 
 /* ////........Home Content........//// */
@@ -158,6 +275,13 @@ body {
   text-decoration: none;
   color: #07374a;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.angle-down-icon i {
+  font-size: 2rem;
 }
 
 /* ////........About Me........//// */
@@ -412,6 +536,11 @@ body {
   margin-bottom: 10px;
 }
 
+.projects-heading {
+  letter-spacing: normal;
+  margin-top: 20px;
+}
+
 .project-description {
   color: #ccc;
   font-size: 1rem;
@@ -451,6 +580,7 @@ body {
 
 .certificate-section {
   padding-bottom: 50px;
+  padding-top: 30px;
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* Gradient background */
 }
 
@@ -514,49 +644,222 @@ body {
 
 /* ////......Contact......///// */
 
-.contact {
-  background: #07374a;
-  position: relative;
-  height: 92vh;
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 80px 20px;
+  display: flex;
+  background-color: #1c1c1c;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-.contact-content h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #25b79f;
-  padding-bottom: 0.5rem;
+.contact-card h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.contact-content .mail {
-  color: #f0f0e6;
-  padding-bottom: 0.2rem;
-  font-size: 1rem;
-}
-
-.contact-content .links {
-  color: #25b79f;
-  padding: 0.5rem;
-  padding-bottom: 1.8rem;
-  font-size: 1rem;
-}
-
-.contact-content a {
+.contact-email a {
+  color: #1abc9c;
+  font-weight: bold;
   text-decoration: none;
-  color: #25b79f;
-  padding: 0.5rem;
-  transition: 0.3s ease-in-out;
+  transition: color 0.3s ease;
 }
 
-.contact-content a:hover {
-  color: #f0f0e6;
+.contact-email a:hover {
+  color: #16a085;
+}
+
+.contact-message {
+  color: #cccccc;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1e90ff, #2ecc71);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.facebook {
+  background: linear-gradient(145deg, #3b5998, #4c669f);
+}
+
+.instagram {
+  background: linear-gradient(145deg, #e95950, #bc2a8d);
+}
+
+.twitter {
+  background: linear-gradient(145deg, #1da1f2, #0d95e8);
+}
+
+.linkedin {
+  background: linear-gradient(145deg, #0077b5, #00669d);
+}
+
+.youtube {
+  background: linear-gradient(145deg, #ff0000, #cc0000);
+}
+
+.social-icon i {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+  transform: scale(1.2);
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.15); /* Slightly increase opacity */
+}
+
+.contact-card h2 {
+  line-height: 1.4; /* Adjust for readability */
+}
+
+.contact-message {
+  line-height: 1.6; /* Make text more legible */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-message {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-card {
+    padding: 15px;
+  }
+
+  .contact-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-message {
+    font-size: 0.8rem;
+  }
+
+  .social-icons {
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+.contact-card, .contact-card * {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; /* For better font rendering on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
+}
+
+
+
+/* Back to Top Button CSS */
+#back-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #ff6600; /* Orange background */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%; /* Circular button */
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Shadow for a 3D effect */
+  transition: opacity 0.4s, transform 0.3s ease-in-out; /* Smooth appearance */
+  opacity: 0; /* Initially hidden */
+}
+
+#back-to-top:hover {
+  background-color: #ff4500; /* Darker orange on hover */
+  transform: scale(1.1); /* Slight zoom-in effect */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+/* Show button when it becomes visible */
+#back-to-top.visible {
+  display: block;
+  opacity: 1; /* Make it fully visible */
+}
+
+@media (max-width: 767px) {
+  #back-to-top {
+    bottom: 15px; /* Adjust position for smaller screens */
+    right: 15px;
+    padding: 12px;
+    font-size: 16px; /* Smaller font size */
+  }
 }
 
 /* ////......Media query......//// */
@@ -772,6 +1075,8 @@ body {
     width: 100%;
   }
 }
+
+
 
 @media (orientation: landscape) and (max-height: 500px) {
   .header {
