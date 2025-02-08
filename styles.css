@@ -168,7 +168,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between; /* Ensures space between logo and links */
-  align-items: center; /* Vertically aligns items */
+  align-items: right; /* Vertically aligns items */
   padding: 10px 20px;
   width: 100%;
   box-sizing: border-box;
@@ -185,8 +185,8 @@ nav {
   flex-wrap: wrap; /* Allows links to wrap in smaller screens */
   justify-content: flex-end; /* Align links to the right */
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 20;
+  padding: 0px;
   gap: 15px; /* Adds spacing between links */
 }
 
