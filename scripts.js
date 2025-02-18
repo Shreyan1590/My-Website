@@ -136,3 +136,14 @@ document.addEventListener('mousemove', onMouseMove, false);
 
 initCursor();
 updateCursor();
+
+import Chatbot from "D:\Codings\Visual Studio Code\My Website/Chatbot.jsx";
+
+export default function Home() {
+  return (
+    <div>
+      {/* Other portfolio content */}
+      <Chatbot />
+    </div>
+  );
+}
